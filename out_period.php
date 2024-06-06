@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
     session_start();
     require_once('connect.php');
@@ -21,4 +22,29 @@
     }else{
         Header("Location: profile.php?6");
     }
+=======
+<?php 
+    session_start();
+    require_once('connect.php');
+    $labid = $_GET['labid'];
+    $period = $_GET['period'];
+    if($period==1){
+        $stmt = $conn->prepare("UPDATE lab SET period_1 = 0 WHERE labid = :labid");
+    }elseif($period==2){
+        $stmt = $conn->prepare("UPDATE lab SET period_2 = 0 WHERE labid = :labid");
+    }elseif($period==3){
+        $stmt = $conn->prepare("UPDATE lab SET period_3 = 0 WHERE labid = :labid");
+    }elseif($period==4){
+        $stmt = $conn->prepare("UPDATE lab SET period_4 = 0 WHERE labid = :labid");
+    }else{
+        Header("Location: profile.php?4");
+    }
+    $stmt->bindParam(':labid', $labid , PDO::PARAM_INT);
+    $result = $stmt->execute();
+    if($result){
+        Header("Location: profile.php?5");
+    }else{
+        Header("Location: profile.php?6");
+    }
+>>>>>>> ef876eed22f943ee3ba159115c2dcb66f1e2affb
 ?>

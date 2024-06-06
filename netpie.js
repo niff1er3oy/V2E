@@ -10,8 +10,8 @@
     client.connect(options);
 
     function onConnect() {
-        client.subscribe("@msg/test");
-        mqttSend("@msg/test", "GET");
+        client.subscribe("@msg/t");
+        mqttSend("@msg/t", "GET");
     }
 
     function doFail(e){

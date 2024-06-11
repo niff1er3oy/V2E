@@ -9,17 +9,10 @@ var options = {
 }
 client.connect(options);
 
-<<<<<<< HEAD
     function onConnect() {
         client.subscribe("@msg/tst");
         mqttSend("@msg/tst", "GET");
     }
-=======
-function onConnect() {
-    client.subscribe("@msg/led");
-    mqttSend("@msg/led", "GET");
-}
->>>>>>> f0f1df334f2a4451228ccc439a62bef97c01c58a
 
 function doFail(e){
     console.log(e);

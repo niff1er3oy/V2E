@@ -8,25 +8,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form method="post" action="check_login.php">
-        <label>Username </label><input type="text" name="l_user" id="l_user">
-        <label>Password </label><input type="password" name="l_pass" id="l_pass">
-        <button type="submit">Submit</button>
-    </form>
     <div class="login-container">
         <div class="login-form">
             <div class="img">
                 <img src="img/user.png" alt="User Icon" class="imgs">
             </div>
             <h2>LOGIN</h2>
-            <form action="login.php" method="post">
+            <form method="post" action="check_login.php">
                 <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
+                    <label>Username </label><input type="text" name="l_user" id="l_user">
                 </div>
                 <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
+                <label>Password </label><input type="password" name="l_pass" id="l_pass">
                 </div>
                 <div class="remember-me">
                     <input type="checkbox" id="remember" name="remember">

@@ -19,10 +19,14 @@
                 <img src="img/user.png" alt="User Icon" class="imgs">
             </div>
             <h2>LOGIN</h2>
-            <form method="post" action="check_login.php">
-                <div class=>
-                    <label>Username </label><input type="text" name="l_user" id="l_user">
-                    <label>Password </label><input type="password" name="l_pass" id="l_pass">
+            <form action="login.php" method="post">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
                 <div class="remember-me">
                     <input type="checkbox" id="remember" name="remember">

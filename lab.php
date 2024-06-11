@@ -16,6 +16,5 @@
         $period = $_GET['period'];
         echo '<a href="out_period.php?labid='.$labid.'&period='.$period.'"><button type="button">Out Lab</button></a>';
     ?>
-    <img src="http://192.168.62.10" alt="ESP-CAM Stream">
 </body>
 </html>

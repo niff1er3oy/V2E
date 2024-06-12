@@ -27,5 +27,7 @@
              </form>
         </div>
     </div>
+    <canvas id="rainfall"></canvas>
 </body>
+<script type="text/javascript" src="rainfall.js"></script>
 </html>

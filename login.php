@@ -6,19 +6,6 @@
     <title>Login</title>
     <?php require_once('connect.php'); ?>
     <link rel="stylesheet" href="styles.css">
-    <title>Realistic Rainfall Animation</title>
-    <style>
-        body {
-            background-color: black;
-            overflow: hidden;
-        }
-        
-        canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    </style>
 </head>
 <body>
     <div class="login-container">
@@ -48,64 +35,5 @@
             </div>
         </div>
     </div>
-    <canvas id="rainfall"></canvas>
-
-    <script>
-        const canvas = document.getElementById('rainfall');
-        const ctx = canvas.getContext('2d');
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const raindrops = [];
-
-        function createRaindrop() {
-            const x = Math.random() * canvas.width;
-            const y = -5;
-            const speed = Math.random() * 5 + 2;
-            const length = Math.random() * 20 + 10;
-
-            raindrops.push({ x, y, speed, length });
-        }
-
-        function updateRaindrops() {
-            for (let i = 0; i < raindrops.length; i++) {
-                const raindrop = raindrops[i];
-
-                raindrop.y += raindrop.speed;
-
-                if (raindrop.y > canvas.height) {
-                    raindrops.splice(i, 1);
-                    i--;
-                }
-            }
-        }
-
-        function drawRaindrops() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            ctx.strokeStyle = 'white';
-            ctx.lineWidth = 2;
-
-            for (let i = 0; i < raindrops.length; i++) {
-                const raindrop = raindrops[i];
-
-                ctx.beginPath();
-                ctx.moveTo(raindrop.x, raindrop.y);
-                ctx.lineTo(raindrop.x, raindrop.y + raindrop.length);
-                ctx.stroke();
-            }
-        }
-
-        function animate() {
-            createRaindrop();
-            updateRaindrops();
-            drawRaindrops();
-
-            requestAnimationFrame(animate);
-        }
-
-        animate();
-    </script>
 </body>
 </html>

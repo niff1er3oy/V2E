@@ -84,11 +84,11 @@ button:hover {
     background-color: #e80;
 }
 
-.create-account {
+.Register {
     margin-top: 20px;
 }
 
-.create-account a {
+.Register a {
     color: #f90;
     text-decoration: none;
 }

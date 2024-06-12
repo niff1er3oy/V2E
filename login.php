@@ -30,8 +30,8 @@
                 </div>
                 <button type="submit">Login</button>
             </form>
-            <div class="create-account">
-                <p>Not a member? <a href="create-account.html">Create account</a></p>
+            <div class="Register">
+                <p>Not a member? <a href="Register.php">Register</a></p>
             </div>
         </div>
     </div>

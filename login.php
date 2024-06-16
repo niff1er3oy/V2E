@@ -36,4 +36,7 @@
         </div>
     </div>
 </body>
+<canvas id="rainfall"></canvas>
+<script type="text/javascript" src="rainfall.js">
+</script>
 </html>

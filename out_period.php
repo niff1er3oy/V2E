@@ -15,6 +15,8 @@
         Header("Location: profile.php?4");
     }
     $stmt->bindParam(':labid', $labid , PDO::PARAM_INT);
+    $stmt->execute();
+    $stmt = $conn->prepare("DELETE FROM chat WHERE labid = $labid");
     $result = $stmt->execute();
     if($result){
         Header("Location: profile.php?5");
